@@ -2,7 +2,7 @@
 
 
 
-#Student Evaluator
+# Student Evaluator
 ## About This Project
 
 This is a **simple** test project that i am *experimenting* in

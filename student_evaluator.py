@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
-
+import matplotlib.pyplot as plt
 
 
 dataset = pd.read_csv("dataset/student_data.csv")
@@ -36,4 +36,14 @@ scores = cross_val_score(model, x, y, cv=5)
 
 #inaccuracy = confusion_matrix(y_test,predictions)
 #print(inaccuracy)
-print(classification_report(y_test,predictions))
+#print(classification_report(y_test,predictions))
+plt.boxplot([
+    dataset[dataset["passed"] == 0]["hours_studied"],
+    dataset[dataset["passed"] == 1]["hours_studied"]
+])
+
+plt.xticks([1, 2], ["Failed", "Passed"])
+plt.title("Hours Studied by Result")
+plt.xlabel("Result")
+plt.ylabel("Hours Studied")
+plt.show()

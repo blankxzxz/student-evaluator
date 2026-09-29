@@ -6,3 +6,5 @@
 ## About This Project
 
 This is a **simple** test project that i am *experimenting* in
+
+## Setup Instruction
